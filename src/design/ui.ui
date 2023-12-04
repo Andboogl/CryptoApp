@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>824</width>
+    <height>553</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CryptoApp</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="background">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>831</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #430073;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>271</width>
+       <height>531</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: #5e00a1;
+border-radius: 20px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>231</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>80</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #f0f0f0;</string>
+      </property>
+      <property name="text">
+       <string>Меню</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="menu_hash_encrypt">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+      </property>
+      <property name="text">
+       <string> Hash-шифрування</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/hash.png</normaloff>icons/hash.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="menu_file_encrypt">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+      </property>
+      <property name="text">
+       <string> Шифрування файлу</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/file.png</normaloff>icons/file.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="about_application">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+      </property>
+      <property name="text">
+       <string> Про программу</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/dandruff.png</normaloff>icons/dandruff.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="exit_out">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>450</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+      </property>
+      <property name="text">
+       <string> Вийти</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/exit.png</normaloff>icons/exit.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="menu_file_decrypt">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>250</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+      </property>
+      <property name="text">
+       <string> Розшифрування файлу</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/decrypt.png</normaloff>icons/decrypt.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>20</y>
+       <width>511</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>0</y>
+         <width>411</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>45</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>Hash-шифрування</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="hash_encrypt_string">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>491</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000000;
+background-color: #f0f0f0;
+border-radius: 10px;
+padding-left: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Введіть сюди сторку, яку хочете зашифрувати</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="hash_encrypt_algorithm">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>104</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string>Sha1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha224</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha384</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha512</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>md5</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>140</y>
+         <width>151</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>Алгоритм шифрування</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="hash_encrypt_encrypt">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>491</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+       </property>
+       <property name="text">
+        <string>Шифрувати</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>260</y>
+         <width>161</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>30</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>Результат:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="hash_sum">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>310</y>
+         <width>491</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000000;
+background-color: #f0f0f0;
+border-radius: 10px;
+padding-left: 10px;</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>Тут буде результат хешування (хеш-сума)</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="copy_hash_sum">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>370</y>
+         <width>491</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+       </property>
+       <property name="text">
+        <string>Копіювати результат</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>0</y>
+         <width>441</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>45</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>Шифрування файлу</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="path_to_encrypt_file">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>491</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000000;
+background-color: #f0f0f0;
+border-radius: 10px;
+padding-left: 10px;</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>Шлях до файлу</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="chose_file_to_encrypt">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>491</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+       </property>
+       <property name="text">
+        <string>Вибрати...</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="file_to_encrypt_password_encrypt">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>280</y>
+         <width>104</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нема</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha224</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha384</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha512</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>md5</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>283</y>
+         <width>151</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>Шифрування паролю</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="encrypt_file">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>320</y>
+         <width>491</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+       </property>
+       <property name="text">
+        <string>Шифрувати</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>390</y>
+         <width>351</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>Увага! Формат файлу при шифруванні не зберігається</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>410</y>
+         <width>481</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>Якщо ви втратите пароль або шифрування паролю, файл буде втраченим</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="file_to_encrypt_password">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>491</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000000;
+background-color: #f0f0f0;
+border-radius: 10px;
+padding-left: 10px;</string>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="placeholderText">
+        <string>Пароль</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>0</y>
+         <width>461</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>40</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>Розшифрування файлу</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="file_to_decrypt_path">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>491</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000000;
+background-color: #f0f0f0;
+border-radius: 10px;
+padding-left: 10px;</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>Шлях до файлу</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="chose_file_to_decrypt">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>491</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+       </property>
+       <property name="text">
+        <string>Вибрати...</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="decrypt_file_password">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>210</y>
+         <width>491</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000000;
+background-color: #f0f0f0;
+border-radius: 10px;
+padding-left: 10px;</string>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="placeholderText">
+        <string>Пароль</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="decrypt_file_password_algorithm">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>270</y>
+         <width>104</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string>Нема</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha224</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha256</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha384</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sha512</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>md5</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>273</y>
+         <width>151</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>Шифрування паролю</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="decrypt_file">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>300</y>
+         <width>491</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background: #6900bf;
+	border-radius: 10px;
+	color: #f0f0f0;
+}
+
+QPushButton::hover {
+	background: #6800ad;
+}</string>
+       </property>
+       <property name="text">
+        <string>Розшифрувати</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>370</y>
+         <width>381</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>За замовчюванням файл розшифровується з форматом .txt</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>0</y>
+         <width>311</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>60</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>CryptoApp</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>80</y>
+         <width>221</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>Версія 0.0.0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>210</y>
+         <width>291</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>40</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #f0f0f0;</string>
+       </property>
+       <property name="text">
+        <string>App created by</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>120</y>
+         <width>371</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: none;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>icons/author_logo.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

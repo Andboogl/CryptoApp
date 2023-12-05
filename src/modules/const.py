@@ -1,7 +1,7 @@
 """Module with different attributes and program values"""
 
 
-WINDOW_SIZE = 824, 553
+WINDOW_SIZE = 824, 690
 
 # Menu buttons styles
 # ---------------------------------------------------
@@ -19,7 +19,7 @@ QPushButton::hover {
 
 CHOSED_MENU_BTN_STYLE = """
 QPushButton {
-    background: #6800ad;
+    background: #570091;
     border-radius: 10px;
     color: #f0f0f0;
 }

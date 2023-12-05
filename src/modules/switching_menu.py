@@ -46,12 +46,36 @@ class SwitchingQStackedWidget:
             self.checked_btn.setStyleSheet(NORMAL_MENU_BTN_STYLE)
             self.checked_btn = self.design.menu_file_decrypt
 
-    def about_application_btn(self):
+    def menu_encrypt_with_data(self):
         """
         Function for changing the current
         button to another menu button
         """
         self.design.stackedWidget.setCurrentIndex(3)
+        self.design.menu_encrypt_with_data.setStyleSheet(CHOSED_MENU_BTN_STYLE)
+
+        if self.checked_btn != self.design.menu_encrypt_with_data:
+            self.checked_btn.setStyleSheet(NORMAL_MENU_BTN_STYLE)
+            self.checked_btn = self.design.menu_encrypt_with_data
+
+    def menu_decrypt_with_data(self):
+        """
+        Function for changing the current
+        button to another menu button
+        """
+        self.design.stackedWidget.setCurrentIndex(4)
+        self.design.menu_decrypt_with_data.setStyleSheet(CHOSED_MENU_BTN_STYLE)
+
+        if self.checked_btn != self.design.menu_decrypt_with_data:
+            self.checked_btn.setStyleSheet(NORMAL_MENU_BTN_STYLE)
+            self.checked_btn = self.design.menu_decrypt_with_data
+
+    def about_application_btn(self):
+        """
+        Function for changing the current
+        button to another menu button
+        """
+        self.design.stackedWidget.setCurrentIndex(5)
         self.design.about_application.setStyleSheet(CHOSED_MENU_BTN_STYLE)
 
         if self.checked_btn != self.design.about_application:

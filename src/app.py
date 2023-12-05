@@ -23,11 +23,24 @@ class Window(QtWidgets.QMainWindow):
         # Button pressing
         self.design.exit_out.clicked.connect(exit)
         self.design.hash_encrypt_encrypt.clicked.connect(self.hash_user_string)
-        self.design.copy_hash_sum.clicked.connect(self.copy_hash_sum)
+        self.design.copy_hash_sum.clicked.connect(
+            lambda: modules.copy_text_to_clipboard(self.design.hash_sum.text())
+            )
+        self.design.copy_encrypted_string.clicked.connect(
+            lambda: modules.copy_text_to_clipboard(self.design.encrypted_with_data_string.text())
+            )
+        self.design.copy_data_to_decrypt_string.clicked.connect(
+            lambda: modules.copy_text_to_clipboard(self.design.data_to_decrypt_encrypted.text())
+            )
+        self.design.copy_decrypted_string.clicked.connect(
+            lambda: modules.copy_text_to_clipboard(self.design.decrypted_string.text())
+        )
+        self.design.decrypt_data.clicked.connect(self.decrypt_with_data)
         self.design.chose_file_to_encrypt.clicked.connect(self.chose_encrypt_file)
         self.design.encrypt_file.clicked.connect(self.encrypt_file)
         self.design.chose_file_to_decrypt.clicked.connect(self.chose_decrypt_file)
         self.design.decrypt_file.clicked.connect(self.decrypt_file)
+        self.design.encrypt_with_data.clicked.connect(self.encrypt_with_data)
 
         # Switching QStackedWidget
         self.stacked_widget_switching = modules.SwitchingQStackedWidget(self.design)
@@ -40,9 +53,48 @@ class Window(QtWidgets.QMainWindow):
             self.stacked_widget_switching.menu_file_decrypt_btn)
         self.design.about_application.clicked.connect(
             self.stacked_widget_switching.about_application_btn)
+        self.design.menu_encrypt_with_data.clicked.connect(
+            self.stacked_widget_switching.menu_encrypt_with_data)
+        self.design.menu_decrypt_with_data.clicked.connect(
+            self.stacked_widget_switching.menu_decrypt_with_data)
 
         self.stacked_widget_switching.menu_hash_encrypt_btn()
         self.setFixedSize(*modules.WINDOW_SIZE)
+
+    def encrypt_with_data(self):
+        """Encrypt user string with data"""
+        user_string = self.design.encrypt_with_data_string.text()
+
+        if user_string.strip():
+            encrypted = modules.encrypt_string_with_data(user_string) # (<ENCRYPTED>, <DATA_TO_DECRYPT>)
+            self.design.encrypted_with_data_string.setText(encrypted[0])
+            self.design.data_to_decrypt_encrypted.setText(str(encrypted[1]))
+
+        else:
+            self.message_box_showing.default('Введіть строку для шифрування')
+
+    def decrypt_with_data(self):
+        """Decrypt encrypted string with data"""
+        encrypted = self.design.encrypted_string_decrypt_data.text()
+        data_to_decrypt = self.design.data_to_decrypt_data.text()
+
+        if encrypted.strip() and data_to_decrypt.strip():
+            try:
+                data_to_decrypt = data_to_decrypt.replace('(', '')
+                data_to_decrypt = data_to_decrypt.replace(')', '')
+                data_to_decrypt = tuple(int(i) for i in data_to_decrypt.split(','))
+
+                decrypted = modules.decrypt_string_with_data(encrypted, data_to_decrypt)
+                self.design.decrypted_string.setText(decrypted)
+
+            except Exception as error:
+                self.message_box_showing.error(
+                    'Не вдалося розшифрувати строку. Перевірте що зашифрована строка та данні для розшифрування вірні.',
+                    str(error)
+                )
+
+        else:
+            self.message_box_showing.default('Введіть всі поля')
 
     def hash_user_string(self):
         """Hash the string that the user selected"""
@@ -120,16 +172,3 @@ class Window(QtWidgets.QMainWindow):
 
         else:
             self.message_box_showing.default('Виберіть файл')
-
-    def copy_hash_sum(self):
-        """Copy hash-sum that generated application"""
-        text = self.design.hash_sum.text()
-
-        if text.strip():
-            clipboard = QtWidgets.QApplication.clipboard()
-            clipboard.setText(text)
-
-            self.message_box_showing.default('Скопійовано')
-
-        else:
-            self.message_box_showing.default('Ви нічого не зашифрували')

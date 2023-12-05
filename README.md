@@ -25,4 +25,4 @@
 <img src='app_photos/app4.png'>
 <img src='app_photos/app5.png'>
 <img src='app_photos/app6.png'>
-На цих фото ви бачите версію программи 1.1.0
+На цих фото ви бачите версію программи 1.0.0
